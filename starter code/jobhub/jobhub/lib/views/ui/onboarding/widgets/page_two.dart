@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:jobhub/views/common/app_style.dart';
 import 'package:jobhub/views/common/height_spacer.dart';
 
@@ -28,7 +29,16 @@ class PageTwo extends StatelessWidget {
             children: [
               Text(
                 "Stable Yourself \n With your Ability",
+                textAlign: TextAlign.center,
                 style: appstyle(30, Color(kLight.value), FontWeight.w500),
+              ),
+              const HeightSpacer(size: 10),
+              Padding(
+                padding: EdgeInsets.all(8.h),
+                child: Text(
+                  "Gwet instant services near you",
+                  style: appstyle(14, Color(kLight.value), FontWeight.normal),
+                ),
               )
             ],
           )
