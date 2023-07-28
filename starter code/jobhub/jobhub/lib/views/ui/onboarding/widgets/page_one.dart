@@ -14,7 +14,7 @@ class PageOne extends StatelessWidget {
       body: Container(
         width: width,
         height: hieght,
-        color: Color(kDarkPurple.value),
+        color: Color(kDarkBlue.value),
         child: Column(
           children: [
             const HeightSpacer(
