@@ -14,7 +14,7 @@ class OnBoardingScreen extends StatelessWidget {
         children: [
           PageOne(),
           PageTwo(),
-          PageThree(),
+          // PageThree(),
         ],
       ),
     );
