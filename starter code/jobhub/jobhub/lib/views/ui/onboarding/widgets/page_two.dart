@@ -37,6 +37,7 @@ class PageTwo extends StatelessWidget {
                 padding: EdgeInsets.all(8.h),
                 child: Text(
                   "Gwet instant services near you",
+                  textAlign: TextAlign.center,
                   style: appstyle(14, Color(kLight.value), FontWeight.normal),
                 ),
               )
