@@ -12,39 +12,62 @@ class PageThree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-            width: width,
-            height: hieght,
-            color: Color(kLightBlue.value),
-            child: Column(
+      body: Container(
+        width: width,
+        height: hieght,
+        color: Color(kLightBlue.value),
+        child: Column(
+          children: [
+            Image.asset("assets/image/page3.png"),
+            ReusableText(
+              text: "Welcome to JobHunt",
+              style: appstyle(30, Color(kLight.value), FontWeight.w500),
+            ),
+            const HeightSpacer(size: 15),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30.w),
+              child: Text(
+                "We help you find your dream job according to your skillset, location and preference to build your career",
+                textAlign: TextAlign.center,
+                style: appstyle(14, Color(kLight.value), FontWeight.normal),
+              ),
+            ),
+            const HeightSpacer(size: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Image.asset("assets/image/page3.png"),
-                ReusableText(
-                  text: "Welcome to JobHunt",
-                  style: appstyle(30, Color(kLight.value), FontWeight.w500),
+                CustomOutlineBtn(
+                  onTap: () {},
+                  text: "Login",
+                  width: width * 0.4,
+                  height: hieght * 0.06,
+                  color: Color(kLight.value),
                 ),
-                const HeightSpacer(size: 15),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30.w),
-                  child: Text(
-                    "We help you find your dream job according to your skillset, location and preference to build your career",
-                    textAlign: TextAlign.center,
-                    style: appstyle(14, Color(kLight.value), FontWeight.normal),
+                GestureDetector(
+                  onTap: null,
+                  child: Container(
+                    width: width * 0.4,
+                    height: hieght * 0.06,
+                    color: Color(kLight.value),
+                    child: Center(
+                      child: ReusableText(
+                        text: "Sign up",
+                        style: appstyle(
+                            16, Color(kLightBlue.value), FontWeight.w600),
+                      ),
+                    ),
                   ),
-                ),
-                const HeightSpacer(size: 20),
-                Row(
-                  children: [
-                    CustomOutlineBtn(
-                      onTap: () {},
-                      text: "Login",
-                      width: width * 0.4,
-                      height: hieght * 0.06,
-                      color: kLight,
-                    )
-                  ],
                 )
               ],
-            )));
+            ),
+            const HeightSpacer(size: 30),
+            ReusableText(
+              text: "Continue as guest",
+              style: appstyle(16, Color(kLight.value), FontWeight.w400),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
