@@ -8,10 +8,13 @@ class PageThree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      width: width,
-      height: hieght,
-      color: Color(kLight.value),
-      // child:
-    ));
+            width: width,
+            height: hieght,
+            color: Color(kLight.value),
+            child: Column(
+              children: [
+                Image.asset("assets/image/page3.png"),
+              ],
+            )));
   }
 }
