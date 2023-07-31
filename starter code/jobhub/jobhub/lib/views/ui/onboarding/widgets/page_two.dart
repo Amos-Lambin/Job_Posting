@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:jobhub/views/common/app_style.dart';
 import 'package:jobhub/views/common/height_spacer.dart';
 
@@ -36,7 +35,7 @@ class PageTwo extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.all(8.h),
                 child: Text(
-                  "Gwet instant services near you",
+                  "Get instant services near you",
                   textAlign: TextAlign.center,
                   style: appstyle(14, Color(kLight.value), FontWeight.normal),
                 ),
