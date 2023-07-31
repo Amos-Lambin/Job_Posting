@@ -10,7 +10,8 @@ class PageThree extends StatelessWidget {
         body: Container(
       width: width,
       height: hieght,
-      color: Color(kDarkPurple.value),
+      color: Color(kLight.value),
+      // child:
     ));
   }
 }
