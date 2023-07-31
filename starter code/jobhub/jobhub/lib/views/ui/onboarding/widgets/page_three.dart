@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jobhub/constants/app_constants.dart';
 import 'package:jobhub/views/common/app_style.dart';
+import 'package:jobhub/views/common/custom_outline_btn.dart';
 import 'package:jobhub/views/common/height_spacer.dart';
 import 'package:jobhub/views/common/reusable_text.dart';
 
@@ -32,7 +33,17 @@ class PageThree extends StatelessWidget {
                   ),
                 ),
                 const HeightSpacer(size: 20),
-                // Row()
+                Row(
+                  children: [
+                    CustomOutlineBtn(
+                      onTap: () {},
+                      text: "Login",
+                      width: width * 0.4,
+                      height: hieght * 0.06,
+                      color: kLight,
+                    )
+                  ],
+                )
               ],
             )));
   }

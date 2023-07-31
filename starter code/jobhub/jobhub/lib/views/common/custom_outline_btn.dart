@@ -9,14 +9,14 @@ class CustomOutlineBtn extends StatelessWidget {
       required this.text,
       this.onTap,
       required this.color,
-      required this.color2});
+      this.color2});
 
   final double? width;
   final double? height;
   final String text;
   final void Function()? onTap;
   final Color color;
-  final Color color2;
+  final Color? color2;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
