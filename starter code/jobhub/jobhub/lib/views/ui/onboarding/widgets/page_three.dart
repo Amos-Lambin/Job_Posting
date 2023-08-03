@@ -19,6 +19,7 @@ class PageThree extends StatelessWidget {
         child: Column(
           children: [
             Image.asset("assets/image/page3.png"),
+            const HeightSpacer(size: 20),
             ReusableText(
               text: "Welcome to JobHunt",
               style: appstyle(30, Color(kLight.value), FontWeight.w500),
