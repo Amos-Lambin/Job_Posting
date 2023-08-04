@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:jobhub/constants/app_constants.dart';
 import 'package:jobhub/views/common/app_style.dart';
 import 'package:jobhub/views/common/custom_outline_btn.dart';
 import 'package:jobhub/views/common/height_spacer.dart';
 import 'package:jobhub/views/common/reusable_text.dart';
+import 'package:jobhub/views/ui/auth/login.dart';
 
 class PageThree extends StatelessWidget {
   const PageThree({super.key});
@@ -38,7 +40,9 @@ class PageThree extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 CustomOutlineBtn(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => const LoginPage());
+                  },
                   text: "Login",
                   width: width * 0.4,
                   height: hieght * 0.06,
