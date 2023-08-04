@@ -7,6 +7,6 @@ class OnBoardNotifier extends ChangeNotifier {
 
   set isLastPage(bool lastpage) {
     _isLastPage = lastpage;
-    // notifyListeners();
+    notifyListeners();
   }
 }
