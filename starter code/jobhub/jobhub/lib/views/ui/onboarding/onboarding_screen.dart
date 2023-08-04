@@ -5,8 +5,15 @@ import 'package:jobhub/views/ui/onboarding/widgets/page_three.dart';
 import 'package:jobhub/views/ui/onboarding/widgets/page_two.dart';
 import 'package:provider/provider.dart';
 
-class OnBoardingScreen extends StatelessWidget {
+class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
+
+  @override
+  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
+}
+
+class _OnBoardingScreenState extends State<OnBoardingScreen> {
+  final PageController pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +23,13 @@ class OnBoardingScreen extends StatelessWidget {
           return Stack(
             children: [
               PageView(
-                physics: NeverScrollableScrollPhysics(),
+                physics: onBoardNotifier.isLastPage
+                    ? const NeverScrollableScrollPhysics()
+                    : const AlwaysScrollableScrollPhysics(),
+                controller: PageController(),
+                onPageChanged: (page) {
+                  onBoardNotifier.isLastPage = page == 2;
+                },
                 children: const [
                   PageOne(),
                   PageTwo(),
