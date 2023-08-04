@@ -48,10 +48,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 bottom: hieght * 0.12,
                 left: 0,
                 right: 0,
-                child: SmoothPageIndicator(
-                  controller: pageController,
-                  count: 3,
-                ),
+                child: onBoardNotifier.isLastPage
+                    ? SizedBox.shrink()
+                    : Center(
+                        child: SmoothPageIndicator(
+                          controller: pageController,
+                          count: 3,
+                          effect: WormEffect(
+                            dotHeight: 12,
+                            dotWidth: 12,
+                            spacing: 10,
+                            dotColor: Color(kDarkGrey.value).withOpacity(0.5),
+                            activeDotColor: Color(kLight.value),
+                          ),
+                        ),
+                      ),
               ),
             ],
           );
